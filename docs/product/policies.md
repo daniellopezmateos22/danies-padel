@@ -1,35 +1,47 @@
 # Policies — Danie’s Padel
 
+Este documento define las políticas del club aplicables al MVP.
+
+---
+
 ## Reservas
-- Pistas: **N** (p. ej., 4).
-- Franja mínima: **60 min** (decidir 60/90).
-- Antelación máxima para reservar: **7 días** (decidir 7/14).
-- Reservas activas por jugador: **2** (decidir).
-- Ventana de cancelación sin penalización: **12 h** (decidir).
-- No-show: a <2 h de la hora → marca **no-show** (V2: penalización).
+- **Pistas**: 4 (Pista 1–4).
+- **Duración mínima por franja**: 60 minutos.
+- **Antelación máxima para reservar**: 7 días.
+- **Reservas activas por jugador**: máximo 2.
+- **Ventana de cancelación sin penalización**: 12 horas antes de la reserva.
+- **No-show**: si un jugador no se presenta y cancela con menos de 2 horas de antelación, se marca como *no-show* (en MVP solo registro, penalización en V2).
+
+---
 
 ## Partidas abiertas
-- Capacidad: **4** jugadores.
-- Nivel objetivo: etiqueta **1–7** (definir escala interna simple).
-- Auto-cierre al llegar a 4: **sí**, envía confirmación.
-- Lista de espera: **1** plaza (entra por orden) — opcional MVP.
+- **Capacidad**: 4 jugadores.
+- **Nivel objetivo**: escala simple 1–7 (1 = principiante, 7 = avanzado).
+- **Cierre automático**: al llegar a 4 jugadores, se cierra y se envían confirmaciones.
+- **Lista de espera**: no incluida en el MVP (planificada para V2).
+
+---
 
 ## Eventos
-- Inscripciones hasta: **24 h** antes del evento (decidir).
-- Aforo: configurable por evento.
+- **Inscripciones abiertas hasta**: 24 horas antes del inicio del evento.
+- **Aforo**: configurable por evento (definido por el staff al crearlo).
+
+---
 
 ## Roles y permisos
-- **Admin**: todo.
-- **Staff**: gestionar reservas/partidas/eventos/usuarios (sin borrar admins).
-- **Jugador**: reservar, unirse a partidas, inscribirse a eventos, editar perfil.
+- **Admin**: acceso completo (usuarios, reservas, partidas, eventos, métricas, configuración).
+- **Staff**: gestionar reservas, partidas, eventos y usuarios (excepto admins).
+- **Jugador/Socio**: reservar pistas, unirse a partidas abiertas, inscribirse en eventos, editar su perfil.
+
+---
 
 ## Emails (via SES)
-- Confirmación de reserva / unión a partida.
-- Recordatorio: **24 h** antes (decidir 24/12).
-- Aviso de cambio / cancelación.
+- **Confirmación**: al reservar pista o unirse a partida abierta.
+- **Recordatorio**: 24 horas antes de reservas, partidas o eventos.
+- **Aviso**: cambios o cancelaciones enviadas automáticamente a los implicados.
+
+---
 
 ## Privacidad y datos
-- Solo datos mínimos: nombre, email, nivel, zona (opcional).
-- Eliminación de cuenta: bajo solicitud (V2 flujo self-service).
-
-> TODO: sustituir **N** y decisiones con valores definitivos.
+- **Datos mínimos** almacenados: nombre, email, nivel, zona (opcional).
+- **Eliminación de cuenta**: disponible bajo solicitud directa (V2 incluirá flujo de autoservicio).

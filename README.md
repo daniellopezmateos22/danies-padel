@@ -40,8 +40,7 @@ Stack objetivo: **Java + Spring Boot**, **Angular**, y **AWS** (RDS Postgres, S3
   - [One-pager](docs/product/one-pager.md)
   - [User stories (MVP)](docs/product/user-stories.md)
   - [Scope MVP](docs/product/scope-mvp.md)
-  - [Policies del club](docs/product/policies.md) ← por completar
+  - [Policies del club](docs/product/policies.md) 
 - Architecture
   - [Data model (alto nivel)](docs/architecture/data-model.md)
-  - [API contracts (MVP)](docs/architecture/api-contracts.md)
-  - [AWS plan](docs/architecture/aws-plan.md) ← por crear
+  - [AWS plan](docs/architecture/aws-plan.md)
