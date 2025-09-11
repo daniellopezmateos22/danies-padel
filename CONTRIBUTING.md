@@ -52,7 +52,7 @@
 ## Comunicación
 - Canales: Issues y PRs en GitHub.
 - Respeta el **Código de Conducta**.
-- Dudas generales: abre un Issue `question:` o escribe a **<tu_email_de_contacto>**.
+- Dudas generales: abre un Issue `question:` o escribe a **daniellopezmateos22@gmail.com**.
 
 ## Licencia
 Al contribuir, aceptas que tus aportes se publiquen bajo la licencia **MIT** del repositorio.

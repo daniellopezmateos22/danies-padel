@@ -27,7 +27,7 @@ Si observas o experimentas una violación, contacta a: **daniellopezmateos22@gma
 Incluye enlaces/capturas y el contexto. Los reportes serán tratados con confidencialidad.
 
 ## Consecuencias
-Los mantenedores pueden tomar acciones que incluyan advertencias, bloqueo temporal o expulsión de la comunidad y/o del repositorio.
+Los admins pueden tomar acciones que incluyan advertencias, bloqueo temporal o expulsión de la comunidad y/o del repositorio.
 
 ## Atribución
 Inspirado en [Contributor Covenant v2.1](https://www.contributor-covenant.org/version/2/1/code_of_conduct/).

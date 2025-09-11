@@ -4,8 +4,6 @@ Plataforma para la **gestión de un club único de pádel**: reservas de pista, 
 
 Stack objetivo: **Java + Spring Boot**, **Angular**, y **AWS** (RDS Postgres, S3/CloudFront, SES, Secrets Manager, Elastic Beanstalk/ECS).
 
-> Estado: **MVP en definición** (sin código por ahora).
-
 ---
 
 ## 🎯 Objetivo del MVP
@@ -36,3 +34,14 @@ Stack objetivo: **Java + Spring Boot**, **Angular**, y **AWS** (RDS Postgres, S3
 - **Configuración/Secretos**: **AWS Secrets Manager**  
 - **Observabilidad**: **CloudWatch**
 
+## 📚 Documentación
+
+- Product
+  - [One-pager](docs/product/one-pager.md)
+  - [User stories (MVP)](docs/product/user-stories.md)
+  - [Scope MVP](docs/product/scope-mvp.md)
+  - [Policies del club](docs/product/policies.md) ← por completar
+- Architecture
+  - [Data model (alto nivel)](docs/architecture/data-model.md)
+  - [API contracts (MVP)](docs/architecture/api-contracts.md)
+  - [AWS plan](docs/architecture/aws-plan.md) ← por crear
