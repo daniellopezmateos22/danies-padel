@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "projects": {
+    "frontend": {
+      "projectType": "application",
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/frontend",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": [],
+            "tsConfig": "tsconfig.app.json",
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": [],
+            "scripts": []
+          },
+          "configurations": {
+            "production": { "optimization": true, "extractLicenses": true },
+            "development": { "optimization": false }
+          },
+          "defaultConfiguration": "development"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": { "browserTarget": "frontend:build" },
+          "configurations": {
+            "production": { "browserTarget": "frontend:build:production" },
+            "development": { "browserTarget": "frontend:build:development" }
+          },
+          "defaultConfiguration": "development"
+        }
+      }
+    }
+  },
+  "defaultProject": "frontend",
+  "cli": {
+    "analytics": "e89332e9-da8f-4f1e-9a55-6002fd3cde0b"
+  }
+}
