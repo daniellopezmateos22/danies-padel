@@ -22,5 +22,5 @@ management:
 
 app:
   jwt:
-    secret: ${JWT_SECRET:change-this-in-prod}
+    secret: "p7y1c0kq9Jv6LJ2q3gH7b0C1mZ8sQ5rTnY3wV6xZ2uP4aN9dR1eT6yU8oL4pQ2mS" 
     expirationMinutes: 60
