@@ -5,9 +5,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class SeedCourts {
-  @Bean
-  CommandLineRunner seedCourts(CourtRepository repo) {
+public class CourtSeedConfig { 
+  @Bean(name = "courtSeeder")   
+  CommandLineRunner courtSeeder(CourtRepository repo) {
     return args -> {
       for (int i = 1; i <= 4; i++) {
         String name = "Pista " + i;
