@@ -1,31 +1,53 @@
-import { Component, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, inject, signal } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
 import { AuthService } from '../core/services/auth.service';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   standalone: true,
   selector: 'app-layout',
-  imports: [CommonModule, RouterLink, RouterOutlet],
+  imports: [
+    CommonModule, RouterLink, RouterOutlet,
+    MatSidenavModule, MatToolbarModule, MatListModule, MatIconModule, MatButtonModule
+  ],
+  styles: [`
+    .app-container { height: 100vh; }
+    .app-toolbar-title { font-weight: 600; }
+    .content { padding: 16px; }
+    .spacer { flex: 1 1 auto; }
+    a.mat-mdc-list-item { border-radius: 8px; }
+  `],
   template: `
-  <div class="min-h-screen grid grid-cols-12">
-    <aside class="col-span-12 md:col-span-3 lg:col-span-2 p-4 border-r space-y-2">
-      <h1 class="text-xl font-bold">Danies Padel</h1>
-      <a routerLink="/timeslots" class="block">Franjas</a>
-      <a routerLink="/courts" class="block">Pistas</a>
-      <a routerLink="/admin" class="block">Admin</a>
-    </aside>
-    <main class="col-span-12 md:col-span-9 lg:col-span-10 p-6">
-      <div class="flex items-center justify-between mb-6">
-        <div>
-          <p class="text-sm opacity-70">Bienvenido</p>
-          <h2 class="text-2xl font-semibold">{{ auth.me?.email }}</h2>
-        </div>
-        <button class="border px-3 py-2 rounded" (click)="logout()">Cerrar sesión</button>
+  <mat-sidenav-container class="app-container">
+    <mat-sidenav mode="side" opened>
+      <div style="padding:16px; font-weight:700; font-size:18px">Danies Padel</div>
+      <mat-nav-list>
+        <a mat-list-item routerLink="/timeslots" routerLinkActive="mdc-elevated">Franjas</a>
+        <a mat-list-item routerLink="/courts" routerLinkActive="mdc-elevated">Pistas</a>
+        <a mat-list-item routerLink="/admin" routerLinkActive="mdc-elevated">Admin</a>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <mat-toolbar color="primary">
+        <span class="app-toolbar-title">Panel</span>
+        <span class="spacer"></span>
+        <span *ngIf="auth.me">{{ auth.me.email }}</span>
+        <button mat-button (click)="logout()" *ngIf="auth.me">
+          <mat-icon>logout</mat-icon> Cerrar sesión
+        </button>
+      </mat-toolbar>
+
+      <div class="content">
+        <router-outlet />
       </div>
-      <router-outlet />
-    </main>
-  </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
   `
 })
 export class AppLayoutComponent {
