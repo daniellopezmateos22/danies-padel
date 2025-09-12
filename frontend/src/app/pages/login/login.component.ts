@@ -39,7 +39,11 @@ export class LoginComponent {
     this.loading = true; this.error = null;
     this.auth.login(this.email, this.password).subscribe({
       next: () => this.router.navigateByUrl('/'),
-      error: (e) => { this.error = e?.error || 'Error al iniciar sesión'; this.loading = false; }
+      error: (e) => {
+        const body = typeof e?.error === 'string' ? e.error : JSON.stringify(e?.error);
+        this.error = `HTTP ${e?.status || '0'} — ${e?.message || ''} ${body || ''}`;
+        this.loading = false;
+      }
     });
   }
 }

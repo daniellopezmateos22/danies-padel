@@ -21,15 +21,19 @@ export class AuthService {
   login(email: string, password: string): Observable<LoginResp> {
     return this.http.post<LoginResp>(`${environment.apiUrl}/auth/login`, { email, password }).pipe(
       tap(r => localStorage.setItem(this.key, r.token)),
-      tap(() => this.fetchMe().subscribe())
+      tap(() => this.fetchMe().subscribe({
+        error: err => console.error('Error en fetchMe:', err)
+      }))
     );
   }
 
+
   fetchMe(): Observable<Me> {
-    return this.http.get<Me>(`${environment.apiUrl}/auth/me`).pipe(
+    return this.http.get<Me>(`${environment.apiUrl}/me`).pipe(
       tap(me => this.meSub.next(me))
     );
   }
+
 
   logout() {
     localStorage.removeItem(this.key);
