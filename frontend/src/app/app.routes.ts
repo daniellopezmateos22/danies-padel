@@ -12,8 +12,11 @@ export const routes: Routes = [
       { path: '', redirectTo: 'timeslots', pathMatch: 'full' },
       { path: 'courts', loadComponent: () => import('./pages/courts/courts.component').then(m => m.CourtsComponent) },
       { path: 'timeslots', loadComponent: () => import('./pages/timeslots/timeslots.component').then(m => m.TimeSlotsComponent) },
-      { path: 'admin', canActivate: [roleGuard(['ADMIN'])], loadComponent: () => import('./pages/courts/courts.component').then(m => m.CourtsComponent) }
+      { path: 'admin', canActivate: [roleGuard(['ADMIN'])], loadComponent: () => import('./pages/courts/courts.component').then(m => m.CourtsComponent) },
+      { path: 'bookings', loadComponent: () => import('./pages/bookings/bookings.component').then(m => m.BookingsComponent) }
+    
     ]
+
   },
   { path: '**', redirectTo: '' }
 ];

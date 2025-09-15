@@ -35,8 +35,19 @@ export class AuthService {
   }
 
 
-  logout() {
-    localStorage.removeItem(this.key);
-    this.meSub.next(null);
-  }
+init(): Promise<void> {
+  if (!this.token) { this.meSub.next(null); return Promise.resolve(); }
+  return new Promise((resolve) => {
+    this.fetchMe().subscribe({
+      next: _ => resolve(),
+      error: _ => { this.logout(); resolve(); }
+    });
+  });
+}
+
+logout() {
+  localStorage.removeItem(this.key);
+  this.meSub.next(null);
+}
+
 }
