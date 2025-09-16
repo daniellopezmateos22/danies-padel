@@ -1,0 +1,10 @@
+{
+  "name": "danies-padel-dev",
+  "private": true,
+  "scripts": {
+    "dev:win": "concurrently -k -n BE,FE -c cyan,magenta \"cd backend && .\\mvnw.cmd -Dspring-boot.run.profiles=dev spring-boot:run\" \"cd frontend && ng serve --proxy-config proxy.conf.json\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}

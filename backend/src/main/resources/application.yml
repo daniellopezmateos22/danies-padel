@@ -6,21 +6,14 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
-    open-in-view: false
-  jackson:
-    serialization:
-      write-dates-as-timestamps: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
 
 server:
   port: 8080
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health,info
-
 app:
   jwt:
-    secret: "p7y1c0kq9Jv6LJ2q3gH7b0C1mZ8sQ5rTnY3wV6xZ2uP4aN9dR1eT6yU8oL4pQ2mS" 
-    expirationMinutes: 60
+    secret: "pbm<a/]K8CO2QeNl,ZP|*crAx0v#TS{nj>_z1:u6=.i)!whRMg$(/4YIGH-.7q5~[V9}^`@DtEoB'dFXJs?kL3U&W%f+y;"
+    expirationMinutes: 120

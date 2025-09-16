@@ -1,0 +1,7 @@
+{
+  "/auth":      { "target": "http://localhost:8080", "secure": false, "changeOrigin": true },
+  "/me":        { "target": "http://localhost:8080", "secure": false, "changeOrigin": true },
+  "/courts":    { "target": "http://localhost:8080", "secure": false, "changeOrigin": true },
+  "/timeslots": { "target": "http://localhost:8080", "secure": false, "changeOrigin": true },
+  "/bookings":  { "target": "http://localhost:8080", "secure": false, "changeOrigin": true }
+}
